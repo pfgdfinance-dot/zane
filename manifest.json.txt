@@ -1,0 +1,8 @@
+{
+"name": "Zane AI",
+"short_name": "Zane",
+"start_url": "index.html",
+"display": "standalone",
+"background_color": "#000000",
+"theme_color": "#7B61FF"
+}
