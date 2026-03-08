@@ -1,1 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Zane AI</title>
+
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#7B61FF">
+
+<style>
+
+body{
+background:#0a0a0a;
+color:white;
+font-family:Arial;
+text-align:center;
+padding:40px;
+}
+
+#chat{
+height:300px;
+overflow:auto;
+border:1px solid #333;
+padding:20px;
+margin-bottom:20px;
+}
+
+input{
+width:70%;
+padding:10px;
+}
+
+button{
+padding:10px 20px;
+background:#7B61FF;
+color:white;
+border:none;
+cursor:pointer;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Zane AI</h1>
+
+<div id="chat"></div>
+
+<input id="message" placeholder="Talk to Zane">
+<button onclick="send()">Send</button>
+
+<script>
+
+function send(){
+
+let input=document.getElementById("message")
+let chat=document.getElementById("chat")
+
+let msg=input.value
+
+chat.innerHTML += "<p><b>You:</b> "+msg+"</p>"
+chat.innerHTML += "<p><b>Zane:</b> I'm learning... soon I'll be smarter.</p>"
+
+input.value=""
+
+}
+
+if ("serviceWorker" in navigator){
+navigator.serviceWorker.register("service-worker.js")
+}
+
+</script>
+
+</body>
+</html>
 
